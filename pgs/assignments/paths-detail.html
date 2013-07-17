@@ -1,0 +1,62 @@
+<article style="padding:0 15px 0 15px">
+	<div> 
+		<!-- Subheading : Replicate Original Item Here... --> 
+		<ul id="replicated_item" class="list block" style="padding-bottom:10px;">
+		</ul>
+
+		<div id="content-scroll" class="scrollMe" style="top:115px"> 
+			<!-- Enhance: Show All Items of Selected Learning Path --> 
+			<ul class="enhance list limit-width break"> 
+				<li data-tmpl="no-items">
+					<div class="text-block">
+						<p class="title" style="padding-left:20px; padding-right:20px">There are no items of this type available at this time.</p>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div> 
+
+	<!-- Templates --> 
+	<div id="templates" style="display:none"> 
+
+    	<!-- Render Assignments --> 
+		<div id="default_tmpl"> 
+
+			<li class="selectable" data-id="0" data-url="" data-scurl="assignment-li" data-role="cellcast"> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='lib/img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bolder"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                    <i data-tmpl="status-completion"></i> 
+                    <i data-tmpl="status-test"></i> 
+                </div> 
+            </li>   
+     
+		</div>
+
+		<!-- Render Activities  --> 
+		<div id="activity_tmpl"> 
+
+			<li class="selectable" data-id="0" data-url="" data-scurl="assignment-false" data-role="cellcast"> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='lib/img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bolder"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                    <!--<p class="desc">Status: <span data-tmpl="status"></span></p>-->
+                </div> 
+                <div class="icon-block"> 
+                	<p data-tmpl="status" style="padding-right:25px; font-size:12px"></p> 
+                </div> 
+            </li>    
+     
+		</div>
+
+	</div> <!-- /templates --> 
+</article> 

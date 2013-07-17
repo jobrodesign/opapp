@@ -1,0 +1,45 @@
+<article style="padding:0 15px 0 15px">
+	<ul class="list limit-width break alt-bg" style="padding-top:25px;">
+		<li class="selectable">
+			<div class="text-block">
+				<p class="title">Announcements</p>
+			</div>
+			<div class="icon-block">
+				<i class="icon-chevron-down"></i>
+			</div>
+		</li>
+	</ul>
+	
+	<!-- Enhance: Show All 'Announcements' --> 
+	<ul class="enhance list limit-width break" data-collection="announcements" data-template="#detail"> 
+		<li data-tmpl="no-items">
+			<div class="text-block">
+				<p class="title">There are no items of this type available at this time.</p>
+			</div>
+		</li>
+	</ul>
+
+	<!-- Data Render Templates --> 
+	<div id="templates" style="display:none"> 
+
+    	<!-- Announcements  --> 
+		<div id="detail"> 
+
+			<li class="selectable" data-url="" data-id="0" data-scurl="announcement-li" data-role="cellcast"> 
+				<div class="icon-block">
+					<i class="icon-bell"></i>
+				</div>
+				<div class="text-block" style="padding-left:0">
+					<p class="title" data-tmpl="msg_title"></p>
+				</div>
+				<div class="icon-block">
+					<i class="icon-arrow-right"></i>
+				</div>
+				<span style="display:none" data-tmpl="msg_text"></span>
+            </li>     
+     
+		</div>  
+
+	</div> <!-- /templates --> 
+
+</article>

@@ -1,0 +1,66 @@
+<article style="padding:0 15px 0 15px">
+	<ul class="list limit-width break alt-bg" style="padding-top:25px;">
+		<li class="selectable">
+			<div class="text-block">
+				<p class="title">Learning Paths</p>
+			</div>
+			<div class="icon-block" data-url="pgs/assignments/legend.html" data-role="ajax">
+                <i class="icon-info"></i>
+            </div>
+			<div class="icon-block">
+				<i class="icon-chevron-down"></i>
+			</div>
+		</li>
+	</ul>
+
+	<!-- Enhance: Show All 'Learning Path' Assignments --> 
+	<ul class="enhance list limit-width break" data-collection="assignments" data-subset="skillprofiles" data-template='{"skillprofiles":"#skillprofile_tmpl", "default":"#default_tmpl"}'> 
+		<li data-tmpl="no-items">
+			<div class="text-block">
+				<p class="title">There are no items of this type available at this time.</p>
+
+			</div>
+		</li>
+	</ul>
+
+	<!-- Templates --> 
+	<div id="templates" style="display:none"> 
+
+    	<!-- Render Assignments  --> 
+		<div id="default_tmpl"> 
+			<li class="selectable" data-id="0" data-url="" data-scurl="assignment-li" data-role="cellcast"> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='lib/img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bolder"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                    <i data-tmpl="status-completion"></i> 
+                    <i data-tmpl="status-test"></i> 
+                </div> 
+            </li>     
+		</div> 
+
+		<!-- Render Learning Paths  --> 
+		<div id="skillprofile_tmpl"> 
+
+			<li class="selectable" data-url="pgs/assignments/paths-detail.html" data-id="0" data-type="skillprofile" data-template='{"activities":"#activity_tmpl", "default":"#default_tmpl"}' data-role="ajax" data-nav="learningpaths"> 
+				<span style="display:none;" data-url="" data-scurl="assignment-false"></span> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='lib/img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bolder"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                	<i class="icon-chevron-right right"></i> 
+                </div> 
+            </li>    
+     
+		</div> 
+
+	</div> <!-- /templates --> 
+</article>

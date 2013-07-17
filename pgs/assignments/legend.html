@@ -1,0 +1,121 @@
+<article>
+	<ul class="list block alt-bg break" style="padding-top:25px;">
+		<li class="selectable">
+			<div class="text-block">
+				<p class="title">Legend</p>
+			</div>
+		</li>
+	</ul>
+
+	<!-- Legend --> 
+	<ul class="list block" style="padding-bottom:25px;">  
+		<li class="border-bottom-none">
+            <div class="icon-block">
+                <i class="complete"></i>
+            </div>
+			<div class="text-block" style="padding-left: 0">
+				<p class="title" >Completed</p>
+			</div>
+		</li>
+        <li class="border-bottom-none">
+            <div class="icon-block">
+                <i class="incomplete"></i>
+            </div>
+            <div class="text-block" style="padding-left: 0">
+                <p class="title" >Incomplete</p>
+            </div>
+        </li>
+        <li class="border-bottom-none">
+            <div class="icon-block">
+                <i class="not_attempted"></i>
+            </div>
+            <div class="text-block" style="padding-left: 0">
+                <p class="title" >Not attempted</p>
+            </div>
+        </li>
+        <li class="border-bottom-none">
+            <div class="icon-block">
+                <i class="test_associated"></i>
+            </div>
+            <div class="text-block" style="padding-left: 0">
+                <p class="title" >Has test</p>
+            </div>
+        </li>
+        <li class="border-bottom-none">
+            <div class="icon-block">
+                <i class="test_passed"></i>
+            </div>
+            <div class="text-block" style="padding-left: 0">
+                <p class="title" >Test passed</p>
+            </div>
+        </li>
+        <li class="border-bottom-none">
+            <div class="icon-block">
+                <i class="test_failed"></i>
+            </div>
+            <div class="text-block" style="padding-left: 0">
+                <p class="title" >Test failed</p>
+            </div>
+        </li>
+	</ul>
+
+	<!-- Templates --> 
+	<div id="templates" style="display:none"> 
+
+    	<!-- Render Assignments  --> 
+		<div id="default_tmpl"> 
+
+			<li class="selectable" data-id="0" data-url="" data-scurl="assignment-true" data-role="cellcast"> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bold"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                    <i data-tmpl="status-completion"></i> 
+                    <i data-tmpl="status-test"></i> 
+                </div> 
+            </li>     
+     
+		</div> 
+
+		<!-- Render Learning Paths  --> 
+		<div id="skillprofile_tmpl"> 
+
+			<li class="selectable" data-url="pgs/assignments/paths-detail.html" data-id="0" data-type="skillprofile" data-template='{"activities":"#activity_tmpl", "dflt":"#default_tmpl"}' data-role="ajax" data-nav="assignments"> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bold"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                	<i class="icon-chevron-right"></i> 
+                </div> 
+            </li>    
+     
+		</div> 
+
+		<!-- Render Activities  --> 
+		<div id="activity_tmpl"> 
+
+			<li class="selectable" data-id="0" data-url="" data-scurl="assignment-false" data-role="cellcast">
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bold"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                	<p data-tmpl="status" style="padding-right:25px; font-size:14px; font-weight:bold;"></p> 
+                </div> 
+            </li>    
+     
+		</div>
+
+	</div> <!-- /templates --> 
+</article>

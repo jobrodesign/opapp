@@ -1,0 +1,106 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+	<meta charset="UTF-8">  
+	<meta name="description" content="Template: Berry">  
+	<meta name="author" content="Matt Black">  
+	  
+	<title>OPUI</title>  
+  
+	<!-- Mobile Specific Metas -->  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />  
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">  
+  
+	<!-- CSS Includes -->  
+	<link rel="stylesheet" type="text/css" href="stylesheets/reset.css"/> 
+	<link rel="stylesheet" type="text/css" href="stylesheets/master.css"/>
+
+	<!-- Project Specific Scripts -->
+	<script>
+	$(document).ready(function(){
+		// Adjust for width being reported incorrectly on the iPad -->
+		var width = $(document).width();
+		if(width == 1032){
+			$('header').css('padding-right', '8px')
+		}
+	});
+	</script>
+</head> 
+ 
+<body> 
+	<!-- Wrap Contents That Will Be Moved As Navigation Is Exposed --> 
+	<div id="wrapper-container"> 
+		<!-- Project Header --> 
+		<header> 
+			<div class="branding left"> 
+			</div> 
+			<div class="button right" data-trigger="nav"> 
+				<div> 
+					<i class="icon-list"></i> 
+				</div> 
+			</div> 
+			<div class="button right" data-url="cellcast://action/sync" data-role="cellcast"> 
+				<div> 
+					<i class="icon-refresh"></i> 
+				</div> 
+			</div> 
+		</header> 
+ 
+		<!-- Project Content --> 
+		<div id="wrapper-content"> 
+			<section id="load-content" attr="scrollMe"> 
+			</section> 
+		</div> 
+ 
+		<!-- Project Footer --> 
+		<footer> 
+			<div class="text-block"> 
+				<p id="copyright">Copyright &copy; 2013 GP Strategies Corporation. All Rights Reserved. &nbsp;|&nbsp;  
+					powered by <span style="text-decoration:underline">OnPoint</span></p> 
+			</div> 
+			<div class="icon-block"> 
+				<img src="img/branding/goyou.png"/> 
+			</div> 
+		</footer> 
+	</div> 
+ 
+	<!-- Project Navigation --> 
+	<div id="wrapper-navigation"> 
+		<nav id="load-navigation" attr="scrollMe"> 
+		</nav> 
+	</div> 
+ 
+	<div id="back-btn" data-trigger="back"> 
+		<div> 
+			<div class="icon-block"> 
+				<i class="icon-chevron-left"></i> 
+			</div> 
+			<div class="text-block"> 
+				<p class="title">Go Back</p> 
+			</div> 
+		</div> 
+	</div> 
+ 	
+ 	<!-- Auto-connect to Weinre -->
+ 	<!--<script async="async" src="http://10.1.10.154:8080/target/target-script-min.js#anonymous"></script>-->
+
+	<!-- Script Includes: Vendor --> 
+	<script type="text/javascript" src="js/vendor/jquery-1.9.1.min.js"></script>  
+	<script type="text/javascript" src="js/vendor/jquery.hammer-1.0.4.js"></script>  
+	<script type="text/javascript" src="js/vendor/jquery.iscroll_4.2.4.js"></script>  
+	<script type="text/javascript" src="js/vendor/jquery.smartresize.js"></script> 
+ 
+	<!-- Script Includes: OPUI --> 
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="js/opui/opui.history.js"></script> 
+	<script type="text/javascript" src="js/opui/opui.nav.js"></script>
+	<script type="text/javascript" src="js/opui/opui.bindings.js"></script> 
+	<script type="text/javascript" src="js/opui/opui.console.js"></script> 
+	<script type="text/javascript" src="js/opui/opui.listitems.js"></script> 
+	<script type="text/javascript" src="js/opui/opui.request.js"></script> 
+	<script type="text/javascript" src="js/opui/opui.search.js"></script> 
+	<script type="text/javascript" src="js/opui/opui.topage.js"></script> 
+	<!--<script type="text/javascript" src="js/opui/opui.smart.js"></script>-->
+</body> 
+</html> 

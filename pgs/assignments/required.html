@@ -1,0 +1,86 @@
+<article style="padding:0 15px 0 15px">
+	<ul class="list limit-width break alt-bg" style="padding-top:25px;">
+		<li class="selectable">
+			<div class="text-block">
+				<p class="title">Required Assignments</p>
+			</div>
+			<div class="icon-block" data-url="pgs/assignments/legend.html" data-role="ajax">
+                <i class="icon-info"></i>
+            </div>
+            <div class="icon-block">
+				<i class="icon-chevron-down"></i>
+			</div>
+		</li>
+	</ul>
+
+	<!-- Enhance: Show All 'Required' Content --> 
+	<ul class="enhance list limit-width break" data-orderascending="order" data-optional="required" data-template='{"activities":"#activity_tmpl", "skillprofiles":"#skillprofile_tmpl", "default":"#default_tmpl"}' style="padding-bottom:75px;">  
+		<li data-tmpl="no-items">
+			<div class="text-block">
+				<p class="title">There are no items of this type available at this time.</p>
+                 
+			</div>
+		</li>
+	</ul>
+
+	<!-- Templates --> 
+	<div id="templates" style="display:none"> 
+
+    	<!-- Render Assignments  --> 
+		<div id="default_tmpl"> 
+
+			<li class="selectable" data-id="0" data-url="" data-scurl="assignment-false" data-role="cellcast"> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bold"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                    <i data-tmpl="status-completion"></i> 
+                    <i data-tmpl="status-test"></i> 
+                </div> 
+            </li>     
+		</div> 
+
+		<!-- Render Learning Paths  --> 
+		<div id="skillprofile_tmpl"> 
+
+			<li class="selectable" data-url="#pathsdetail" data-id="0" data-type="skillprofile" data-template="#detail" data-role="ajax" data-nav="2"> 
+				<span style="display:none;" data-url="" data-scurl="assignment-li"></span> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bold"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                </div> 
+                <div class="icon-block"> 
+                	<i class="icon-arrow-right right"></i> 
+                </div> 
+            </li>    
+     
+		</div> 
+
+		<!-- Render Activities  --> 
+		<div id="activity_tmpl"> 
+			<li class="selectable" data-url="#pathsdetail" data-id="0" data-type="activity" data-template="#detail" data-role="ajax" data-nav="2"> 
+				<span style="display:none;" data-url="" data-scurl="assignment-false"></span> 
+                <div class="img-block"> 
+                    <img src="" data-tmpl="thumb" onerror="this.onerror=null; this.src='img/thumbs/sample.png';"> 
+                </div> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bold"></p> 
+                    <p class="desc" data-tmpl="description"></p> 
+                    <p class="desc">Status: <span data-tmpl="status"></span></p>
+                </div> 
+                <div class="icon-block"> 
+                	<i class="icon-arrow-right right"></i> 
+                </div> 
+            </li>    
+     
+		</div>
+
+	</div> <!-- /templates --> 
+</article>

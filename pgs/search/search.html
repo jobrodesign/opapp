@@ -1,0 +1,59 @@
+<article style="padding:0 15px 0 15px">
+	<!-- Subheading --> 
+	<ul class="list block" style="padding-bottom:15px"> 
+		<li class="img_header search"> 
+		</li>
+		<li class="txt_header theme_two"> 
+			<i class="icon-search"></i>
+			<p class="text-upper">Search</p>
+		</li> 
+	</ul> 
+	<div class="internal-article-wrapper" style="margin-top:145px">
+		<ul class="list break indented">
+			<li>
+				<!-- The input box has to live outside of the scrollable area -->
+				<div class="input-block"> 
+                   <input data-role="search-term" type="text" name="search_term" value="enter search term here..."   
+							onfocus="if (this.value == 'enter search term here...') {this.value = '';} rePos(this);"   
+							onblur="if (this.value == '') {this.value = 'enter search term here...';}" class="stop"/>
+					</input>
+                </div> 
+                <div data-role="search-button" class="icon-block"> 
+                    <i class="icon-search"></i> 
+                </div>
+                <div data-role="search-clear" class="icon-block"> 
+                    <i class="icon-remove"></i> 
+                </div>
+			</li>
+		</ul>
+		
+		<!-- Begin scrolling area -->
+		<div id="content-scroll" class="scrollMe" style="top:65px">
+			<ul class="list break indented" data-role="search-results" data-collection="catalog" data-template="#catalog_tmpl" data-itemtemplate="null" style="padding-bottom:15px">
+			</ul>
+		</div>
+	</div>
+
+	<!-- Templates --> 
+	<div id="templates" style="display:none"> 
+
+    	<!-- Render Assignments  --> 
+		<div id="catalog_tmpl">
+
+			<li class="selectable" data-id="0" data-url="" data-tmpl="action"> 
+                <div class="text-block"> 
+                    <p class="title" data-tmpl="title" style="font-weight:bolder; padding-left:15px; padding-right:15px"></p> 
+                </div> 
+                <div class="icon-block"> 
+                    <p data-tmpl="actionTitle" style="padding-right:25px"></p>
+                </div> 
+
+                <!-- Determine the searchable information types -->    
+				<span class="hidden" data-tmpl="metatags" style="display:none;"></span>
+				<span class="hidden" data-tmpl="description" style="display:none;"></span>  
+            </li>     
+     
+		</div>
+
+	</div> <!-- /templates -->
+</article>
